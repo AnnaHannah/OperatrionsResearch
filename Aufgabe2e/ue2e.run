@@ -1,0 +1,13 @@
+# run files, machen Consol interaktion weg
+
+/*
+ampl : model centre.mod ; # <-- tells AMPL which model you want to solve
+ampl : option solver cplex ; # <-- tells AMPL which solver you want to use
+ampl : solve ; # <-- tells AMPL to solve it!
+*/
+
+data 2e.dat
+model 2e.mod ; # <-- tells AMPL which model you want to solve
+
+option solver gurobi ; # <-- tells AMPL which solver you want to use
+solve ; # <-- tells AMPL to solve it!
