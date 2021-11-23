@@ -1,0 +1,14 @@
+
+
+reset; # clear cache
+model a1.mod ; # <-- tells AMPL which model you want to solve
+data a1.dat ;
+display rohstoffe,  produktionszeit,  lagerraum,  gewinn; # print
+
+option solver gurobi ; # <-- tells AMPL which solver you want to use
+solve ; # <-- tells AMPL to solve it!
+
+display Select ;
+display TotalUsedResource;
+display TotalGewinn ;
+

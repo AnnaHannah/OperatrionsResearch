@@ -1,0 +1,17 @@
+
+# Ein Betrieb stellt vier Produkte A, B, C und D her. 
+# Die tägliche Fertigungssituation ist durch folgende Tabelle gegeben:
+
+set PRODUKT = produkt_A produkt_B produkt_C produkt_D; # set of products 
+
+param : rohstoffe  produktionszeit  lagerraum  gewinn:=
+produkt_A 6 3 6 100
+produkt_B 4 1 5 130
+produkt_C 3 3 4 100
+produkt_D 5 2 3 110;
+
+# Kapazitätsbeschränkungen
+param max_ersatz_r := 440;
+param max_ersatz_p := 460;
+param max_ersatz_l := 555;
+
