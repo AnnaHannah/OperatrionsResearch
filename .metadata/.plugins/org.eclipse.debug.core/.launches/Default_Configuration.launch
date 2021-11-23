@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.ampldev.launching.ampl">
+<booleanAttribute key="ampl.autoSolve" value="true"/>
+<listAttribute key="ampl.projectNames">
+<listEntry value="Aufgabe2e"/>
+<listEntry value="Aufgabe2e"/>
+</listAttribute>
+<listAttribute key="ampl.relativePaths">
+<listEntry value="2e.mod"/>
+<listEntry value="2e.dat"/>
+</listAttribute>
+<booleanAttribute key="ampl.useSAMPL" value="false"/>
+</launchConfiguration>
