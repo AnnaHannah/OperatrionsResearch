@@ -1,0 +1,16 @@
+# data file - separated from formula(model file
+
+# declare what Strings "are" the projekt:
+set PROJECTS := park basketball rec pool ;
+
+# more easy way of writing tables
+# tabs dont matter
+
+param: 		usage 	cost 	space :=
+park		600 	50		8	
+basketball	100 	20		0
+rec			300		150		4		
+pool		500		70		5	;
+
+param max_spend := 60;
+
