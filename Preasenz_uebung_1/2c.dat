@@ -1,0 +1,13 @@
+set produkte1:= einfamilienhaus zweifamilienhaus;
+set produkte2:= dreifamilienhaus;
+set ressourcen:= flaeche;
+
+param deckungsbeitrag:= einfamilienhaus 20000 zweifamilienhaus 25000 dreifamilienhaus 32000;
+param verfuegbare_ressourcen:= flaeche 90000;
+param mindestanzahl:= 0.4;
+param maximalanzahl:= 0.7;
+
+param benoetigte_ressourcen_matrix: flaeche:=
+	einfamilienhaus 	800
+	zweifamilienhaus 	1000
+	dreifamilienhaus 	1200 ;

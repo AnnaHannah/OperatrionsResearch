@@ -1,4 +1,4 @@
-
+/*
 set PRODUKT;
 
 # by defailt they are numerated/indexed if you use {}, to use Index you need to use quadratische Kammern z.B.:[i]
@@ -30,5 +30,27 @@ subj to Ersatz_r : 		sum { j in PRODUKT } rohstoffe [ j ] * Select [ j ] <= max_
 subj to Ersatz_p : 		sum { j in PRODUKT } produktionszeit [ j ] * Select [ j ] <= max_ersatz_p;
 subj to Ersatz_l : 		sum { j in PRODUKT } lagerraum [ j ] * Select [ j ] <= max_ersatz_l;
 
+*/
 
+# musterlösung aus Folien
+
+option solver gurobi;
+
+#import set+param
+set produkte;
+set ressourcen;
+
+# mengen-klammern -> enumeration of indexes in Menge
+param gewinn{produkte};
+param verf_ressourcen{ressourcen};
+param ressourcen_Matrix{produkte, ressourcen};
+
+#dessision Variable
+var every_instance{produkte} >= 0 integer;
+
+#goal
+maximize z: sum{p in produkte} gewinn[p] * every_instance[p];
+
+# constrains
+s.t. Kapazitaet{r in ressourcen}: sum{p in produkte} ressourcen_Matrix[p,r] * every_instance[p] <= verf_ressourcen[r]; 
 
