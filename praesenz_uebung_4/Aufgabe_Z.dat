@@ -1,0 +1,31 @@
+set Pizzabäckerei:= p1 p2 p3 p4 p5;
+set Fabriken:= f1 f2 f3 f4;
+set Verkauf:= v1 v2 v3;
+
+param errichtungskosten:= f1 20 f2 35 f3 18 f4 25;
+param transportkosten:
+
+	p1	p2	p3	p4	p5:=
+
+f1	2	4	20	18	7
+f2	4	18	2	14	9
+f3	14	12	2	10	5
+f4	8	1	15	4	23;
+
+param transport:
+
+	v1	v2	v3:=
+
+p1	5	12	3	
+p2	8	15	6
+p3	9	2	16
+p4	7	11	14
+p5	13	4	2;
+
+#param bedarf:= p1 200 p2 150 p3 120 p4 100 p5 80;
+param produktion := f1 200 f2 100 f3 200 f4 300;
+param bed:= v1 300 v2 250 v3 120;
+param Lager:= p1 200 p2 400 p3 120 p4 230 p5 150;
+
+
+

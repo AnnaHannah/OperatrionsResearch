@@ -1,0 +1,15 @@
+reset; # clear cache
+# solver/compiler limits (stupidity prevention)-> 500 itarations
+options ipopt_options "nlp_scaling_method=none mu_init=1e-2 max_iter= 500";
+
+#import
+model a5_b.mod ; 
+
+# choose solver: https://ampl.com/BOOK/CHAPTERS/21-nonlinear.pdf
+#option solver MINOS ; 
+option solver gurobi ; 
+solve ; 
+
+# print my results
+display lambda;
+display z ,x1 , x2;

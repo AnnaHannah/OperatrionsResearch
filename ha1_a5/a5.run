@@ -1,0 +1,14 @@
+reset; # clear cache
+
+#import
+model a5.mod ; 
+
+#choose solver
+option solver gurobi ; 
+
+#solve
+solve ; 
+
+# print result
+display x1 , x2 ; 
+display z ;

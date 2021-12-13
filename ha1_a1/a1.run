@@ -1,0 +1,16 @@
+#reset; # clear cache
+
+# import
+model a1.mod ;
+data a1.dat ;
+
+# choose solver
+option solver gurobi ; 
+
+# solve
+solve ; 
+
+# print result matrix
+display x ; 
+display d ; 
+display R1;

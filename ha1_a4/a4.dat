@@ -1,0 +1,31 @@
+# 3 Layers
+set Fabriken:= f1 f2 f3 ;
+set Habitat:= p1 p2 p3 p4 ;
+set Bergbaustation:= v1 v2 v3 v4;
+
+#Keine Aufbaukosten -> 1 ist neurales Element bei multiplikation nicht 0. Daher 1
+param errichtungskosten:= f1 1 f2 1 f3 1 ;
+
+# Fabrik -> Lager (Tabelle 2)
+param transportkosten:
+	p1	p2	p3	p4	=
+f1	460 490 380 285
+f2	330 645 535 200
+f3	645 515 185 580		;
+
+# Lager -> Kunde (Tabelle 4)
+param transportKunde:
+	v1	v2	v3 v4:=
+p1	620 290 200 350	
+p2	545 230 365 575
+p3	535 245 545 320
+p4	285 280 605 365		;
+
+#Alle Kapazitaeten durch 100
+#Fertigungskapazitaeten Fabrik (Tabelle 3)
+param fertigung_kap := f1 44 f2 40 f3 36;
+# Liefermenge an Kunden (Tabelle 1)
+param endbedarf:= v1 36 v2 24 v3 31 v4 29;
+# Lagerkapazitaeten (Tabelle 5)
+param lager_kap:= p1 35 p2 21 p3 44 p4 20 ;
+

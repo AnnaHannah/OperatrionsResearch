@@ -1,0 +1,14 @@
+reset; # clear cache
+
+#import
+model a4.mod ;
+data a4.dat; 
+
+# choose solver: https://ampl.com/BOOK/CHAPTERS/21-nonlinear.pdf
+# option solver MINOS ; 
+option solver gurobi ; 
+solve ; 
+
+# results
+printf( "\n!!!  @ME nicht vergessen *00 bei Mengen ranzuhängen \n \n"); 
+display x, y, w, z;

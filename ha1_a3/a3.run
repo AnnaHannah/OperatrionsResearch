@@ -1,0 +1,19 @@
+reset; # clear cache
+
+# import
+model a3.mod ;
+data a3.dat ;
+
+# choose solver
+option solver gurobi ; 
+
+# solve
+solve ; 
+
+# print result matrix
+display x ; 
+display SubtourElimination;
+
+
+
+
